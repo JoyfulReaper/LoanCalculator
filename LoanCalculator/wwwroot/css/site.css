@@ -69,3 +69,62 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+/* Loan Form Styles
+------------------------------------------------ */
+.loanForm {
+    background-color: rgb(231,231,231);
+}
+
+.loanForm input {
+    width: 100%;
+    padding: .5rem;
+}
+
+.loanForm button {
+    float: right;
+}
+
+#paymentTitle {
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+#payment {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #2B404F;
+}
+
+#loanBreakDown {
+    text-align: center;
+}
+
+#tableHeader {
+    background-color: #2B404F;
+}
+
+#totalCost {
+    font-weight: bold;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.btn {
+    border: 2px solid black;
+    background-color: #ffffff;
+}
+
+.btn-cfOrange {
+    border-color: #ff993b;
+    color: #2B404F;
+}
+
+.btn-cfOrange:hover {
+    background-color: #ff993b;
+    color: #212121;
+}
