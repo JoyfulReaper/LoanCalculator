@@ -1,4 +1,5 @@
-﻿using LoanCalculator.Models;
+﻿using LoanCalculator.Helpers;
+using LoanCalculator.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -44,9 +45,10 @@ namespace LoanCalculator.Controllers
         }
 
         [HttpPost]
+        [AutoValidateAntiforgeryToken]
         public IActionResult LoanCalculator(Loan loan)
         {
-            return View();
+            return View(LoanHelper.GetPayments(loan));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

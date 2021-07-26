@@ -1,6 +1,7 @@
 ﻿@model LoanCalculator.Models.Loan
 
 @{
+    ViewData["Title"] = "Loan Calculator: Application";
 }
 
 <div class="container">
@@ -23,7 +24,7 @@
                         <input type="number" class="form-control" id="lRate" min="1" step=".1" value=@Model.Rate asp-for="Rate" />
                     </div>
                 </div>
-                <button type="submit" class="btn btn-cfOrange mt-2">Calculate</button>
+                <button type="submit" class="btn btn-loan mt-2 mb-2">Calculate</button>
             </form>
         </div>
         <div class="col">
@@ -58,9 +59,9 @@
     @if (Model.Payments.Count > 0)
     {
         <div class="row">
-            <div class="col">
-                <table id="scheduleTable" class="table table-striped table-hover">
-                    <thead class="text-white">
+            <div class="col table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead id="tableHeader" class="text-white">
                         <tr>
                             <th>Month</th>
                             <th>Payment</th>
@@ -75,11 +76,11 @@
                         {
                         <tr>
                             <td>@item.Month</td>
-                            <td>@item.Payment</td>
-                            <td>@item.MonthlyPrincipal</td>
-                            <td>@item.MonthlyInterest</td>
-                            <td>@item.TotalInterest</td>
-                            <td>@item.Balance</td>
+                            <td>@item.Payment.ToString("C")</td>
+                            <td>@item.MonthlyPrincipal.ToString("C")</td>
+                            <td>@item.MonthlyInterest.ToString("C")</td>
+                            <td>@item.TotalInterest.ToString("C")</td>
+                            <td>@item.Balance.ToString("C")</td>
                         </tr>
                         }
                     </tbody>

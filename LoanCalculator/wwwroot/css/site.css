@@ -119,12 +119,44 @@ body {
     background-color: #ffffff;
 }
 
-.btn-cfOrange {
-    border-color: #ff993b;
+.btn-loan {
+    border-color: #12e393;
     color: #2B404F;
 }
 
-.btn-cfOrange:hover {
-    background-color: #ff993b;
+.btn-loan:hover {
+    background-color: #12e393;
     color: #212121;
+}
+
+:root {
+    --primary-color: #2b7022;
+    --secondary-color: #5d83eb;
+    --dark-color: #07200b;
+    --white-color: #dff3e4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+}
+
+main > .container {
+    padding: 40px 15px 0;
+}
+
+
+.bsicon {
+    color: purple;
+}
+
+.html5icon {
+    color: orangered;
+}
+
+.cssicon {
+    color: rgb(11, 82, 214)
+}
+
+.checklist > li i {
+    color: var(--secondary-color);
 }
